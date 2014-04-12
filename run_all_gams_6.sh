@@ -13,7 +13,7 @@ cd $hw_dir
 dir_list=$(find $1 -mindepth 1 -maxdepth 1 -type d)
 for dir in $dir_list
 do 
-	dir_better=$(echo $dir | tr -d [' '\(\)])
+	dir_better=$(echo $dir | tr -d [' '\(\)\,])
 	echo $dir_better
 	mv $dir $dir_better
 	cd $dir_better
